@@ -1,0 +1,5 @@
+mixin chevron(params)
+    - var theme = params.theme || 'hit';
+    - var text = params.text;
+
+    p(class='chevron chevron--' + theme) !{text}

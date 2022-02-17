@@ -1,0 +1,11 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head.pug
+
+    head
+        +head(head.defaults)
+    body.page
+        block section
+        script(src='%=static=%js/separate-js/swiper.min.js')
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

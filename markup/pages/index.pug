@@ -1,0 +1,151 @@
+extends _template.pug
+
+include ../components/ico-svg/ico-svg.pug
+include ../components/button/button.pug
+include ../components/form/form.pug
+include ../components/product-card/product-card.pug
+include ../components/chevron/chevron.pug
+
+append section
+    h1.visually-hidden Каталог смартфонов
+    main.main
+        +form({
+            formClass: 'form'
+        })
+            +product-card({
+                buttonCart : {
+                    text: 'В корзину',
+                    ariaLabel : 'добавить в корзину'
+                },
+                buttonFavorite : {
+                    size : 'small',
+                    ariaLabel : 'добавить в избранное'
+                },
+                buttonScale : {
+                    size : 'small',
+                    ariaLabel : 'добавить к сравнению'
+                },
+                path: 'assets/product-card',
+                format: 'jpg',
+                width: '84',
+                height: '171',
+                svg: {
+                    'icoName': 'heart',
+                },
+                scaleSvg: {
+                    'icoName': 'scale',
+                },
+                card: [{
+                    chevron: {
+                        theme: 'info',
+                        text: 'Кэшбек 25%'
+                    },
+                    image: 'photo-1',
+                    alt : 'Смартфон 1',
+                    activePrice : '13 200',
+                    title : 'Смартфон APPLE IPhone 12 Pro Max 256Gb, черный',
+                    rating : '4.9',
+                    reviews: '2 отзыва',
+                    dif : 'phone1'
+                },{
+                    image: 'photo-2',
+                    alt : 'Смартфон 2',
+                    activePrice : '42 800',
+                    title : 'Смартфон APPLE Iphone 11 Pro 512Gb, черный',
+                    rating : '4.8',
+                    reviews: '54 отзыва',
+                    dif : 'phone2'
+                },{
+                    image: 'photo-3',
+                    alt : 'Смартфон 3',
+                    activePrice : '13 200',
+                    title : 'Смартфон GOOGLE Pixel 4a 128Gb, черный',
+                    rating : '4.9',
+                    reviews: '48 отзывов',
+                    dif : 'phone3'
+                },{
+                    image: 'photo-4',
+                    alt : 'Смартфон 4',
+                    chevron: {
+                        theme: 'sale',
+                        text: 'Скидка 30%'
+                    },
+                    activePrice : '35 990',
+                    oldPrice: '46 990',
+                    title : 'Смартфон APPLE IPhone 12 Pro Max 256Gb, черный',
+                    rating : '4.3',
+                    reviews: '4 отзыва',
+                    dif : 'phone4'
+                },{
+                    image: 'photo-5',
+                    alt : 'Смартфон 5',
+                    activePrice : '10 600',
+                    title : 'Смартфон OnePlus 8 Pro 128Gb, черный',
+                    rating : '4.7',
+                    reviews: '11 отзывов',
+                    dif : 'phone5'
+                },{
+                    image: 'photo-6',
+                    alt : 'Смартфон 6',
+                    chevron: {
+                        theme: 'hit',
+                        text: 'Хит продаж'
+                    },
+                    activePrice : '13 200',
+                    title : 'Смартфон Sumsung Galaxy Note20 5G 256Gb, черный',
+                    rating : '4.4',
+                    reviews: '10 отзывов',
+                    dif : 'phone6'
+                },{
+                    image: 'photo-7',
+                    alt : 'Смартфон 7',
+                    chevron: {
+                        theme: 'sale',
+                        text: 'Скидка 13%'
+                    },
+                    activePrice : '41 100',
+                    oldPrice: '46 990',
+                    title : 'Смартфон APPLE IPhone 12 Pro Max 256Gb, черный',
+                    rating : '3.4',
+                    reviews: '2 отзыва',
+                    availabilily: 'no',
+                    availabilityText: 'Нет в наличии',
+                    dif : 'phone7',
+                },{
+                    image: 'photo-8',
+                    alt : 'Смартфон 8',
+                    activePrice : '15 350',
+                    title : 'Смартфон Samsung Galaxy Note20 Ultra 5G 256Gb, черный',
+                    rating : '4.5',
+                    reviews: '2 отзыва',
+                    dif : 'phone8'
+                },{
+                    image: 'photo-9',
+                    alt : 'Смартфон 9',
+                    activePrice : '13 200',
+                    title : 'Смартфон APPLE IPhone 12 Pro Max 256Gb, черный',
+                    rating : '4.9',
+                    reviews: '2 отзыва',
+                    dif : 'phone9'
+                },{
+                    chevron: {
+                        theme: 'info',
+                        text: 'Кэшбек 25%'
+                    },
+                    image: 'photo-1',
+                    alt : 'Смартфон 1',
+                    activePrice : '13 200',
+                    title : 'Смартфон APPLE IPhone 12 Pro Max 256Gb, черный',
+                    rating : '4.9',
+                    reviews: '2 отзыва',
+                    dif : 'phone1'
+                },{
+                    image: 'photo-2',
+                    alt : 'Смартфон 2',
+                    activePrice : '42 800',
+                    title : 'Смартфон APPLE Iphone 11 Pro 512Gb, черный',
+                    rating : '4.8',
+                    reviews: '54 отзыва',
+                    dif : 'phone2'
+                }]
+            })

@@ -1,0 +1,22 @@
+// Mixin size icons
+@mixin size($size) {
+    width: $size;
+    height: $size;
+}
+
+$sm-ico: 22px;
+
+.ico-svg {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    color: $color-light-text;
+
+    &--sm {
+        @include size($sm-ico);
+    }
+}
+
+.ico-svg:hover {
+    color: $color-background;
+}

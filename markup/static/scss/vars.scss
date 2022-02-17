@@ -1,0 +1,25 @@
+// File for scss-vars.
+// Viewports
+
+$vp--tablet: 1199px;
+$vp--mobile: 767px;
+
+// Default
+
+$color-default-black: #000000;
+$color-default-white: #ffffff;
+$color-transparent: rgba(255, 255, 255, 0);
+
+// Base
+$color-background: #de012c;
+$color-text-inner: #001524;
+$color-background-inner: #e6e3e4;
+$color-shadow: rgba(157, 162, 166, 0.12);
+$color-shadow-hover: rgba(157, 162, 166, 0.35);
+$color-light-text: #797d80;
+$color-info: #5ebad9;
+$color-sale: #fb212f;
+$color-hit: #8962f8;
+
+$font: 'M PLUS 1p', 'Arial', sans-serif;
+$main-transition: all 0.2s ease-in-out 0s;

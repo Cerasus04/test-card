@@ -1,0 +1,47 @@
+mixin product-card(params)
+
+    - var buttonCart = params.buttonCart;
+    - var buttonFavorite = params.buttonFavorite;
+    - var buttonScale = params.buttonScale;
+    - var svg = params.svg;
+    - var scaleSvg = params.scaleSvg;
+    - var path = params.path;
+    - var format = params.format;
+    - var width = params.width;
+    - var height = params.height;
+
+
+    each item in params.card
+        - var image = item.image;
+        - var alt = item.altText;
+        - var chevron = item.chevron || false;
+        - var productHref = item.productHref || '#';
+        - var activePrice = item.activePrice;
+        - var oldPrice = item.oldPrice || false;
+        - var title = item.title;
+        - var availabilily = item.availabilily || 'yes';
+        - var availabilityText = item.availabilityText || 'Есть в наличии';
+        - var rating = item.rating;
+        - var reviews = item.reviews;
+        - var reviewsHref = item.reviewsHref || '#';
+
+        article.product-card&attributes(attributes)
+            if chevron
+                +chevron(chevron)
+            a.product-card__link(href=productHref)
+                img(class='product-card__img' src='%=static=%img/' + path + '/' + image + '.' + format width=width, height=height, alt=altText)
+            p.product-card__price #{activePrice}
+                if oldPrice
+                    s #{oldPrice}
+            h2.product-card__title #{title}
+            .product-card__info
+                p(class='product-card__availabilily product-card__availability--' + availabilily) #{availabilityText}
+                p.product-card__rating #{rating}
+                a.product-card__reviews(href=reviewsHref) #{reviews}
+            .product-card__button-block
+                +button(buttonCart)
+                +button(buttonFavorite)
+                    +ico-svg(svg)
+                +button(buttonScale)
+                    +ico-svg(scaleSvg)
+

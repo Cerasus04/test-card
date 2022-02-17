@@ -1,0 +1,121 @@
+.product-card {
+    position: relative;
+    box-sizing: border-box;
+    flex-basis: calc((100% - 3 * 30px) / 4);
+    margin-bottom: 30px;
+    height: 100%;
+    padding: 20px 10px;
+    transition: $main-transition;
+    background-color: $color-default-white;
+    box-shadow: 0 4px 15px $color-shadow;
+
+    &:hover {
+        transition: $main-transition;
+        box-shadow: 0 4px 20px $color-shadow-hover;
+    }
+}
+
+.product-card__link {
+    display: block;
+    height: 171px;
+    margin-bottom: 30px;
+}
+.product-card__img {
+    display: block;
+    width: auto;
+    max-height: 100%;
+    margin: 0 auto;
+}
+.product-card__price {
+    margin: 0 0 10px;
+    color: $color-text-inner;
+    font-family: $font;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    & s {
+        margin-left: 16px;
+        color: $color-light-text;
+        font-family: $font;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+}
+.product-card__title {
+    margin: 0 0 16px;
+    color: $color-text-inner;
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.product-card__info {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+}
+.product-card__availabilily {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto 0 0;
+    padding-left: 22px;
+    color: $color-text-inner;
+    font-family: $font;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.product-card__availability--yes {
+    &::before {
+        content: url('%=static=%assets/product-card/check.svg');
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+    }
+}
+.product-card__availability--no {
+    &::before {
+        content: url('%=static=%assets/product-card/close.svg');
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+    }
+}
+.product-card__rating {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    padding-left: 22px;
+    color: $color-text-inner;
+    font-family: $font;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    &::before {
+        content: '';
+        @include bg-svg($star);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+.product-card__reviews {
+    margin-left: 10px;
+    color: $color-light-text;
+    font-family: $font;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.product-card__button-block {
+    display: grid;
+    grid-template-columns: 1fr min-content min-content;
+    column-gap: 10px;
+    align-items: center;
+}
